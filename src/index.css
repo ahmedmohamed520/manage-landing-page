@@ -20,3 +20,52 @@ ul {
 a {
     text-decoration: none;
 }
+
+/* Global Start */
+.container {
+    width: 1200px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+.heading-primary {
+    font-size: 3rem;
+    line-height: 1.2;
+    color: var(--clr-gray-5);
+    margin-bottom: 1.5rem;
+}
+.heading-secondary {
+    color: var(--clr-gray-5);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+.text {
+    margin-bottom: 1.5rem;
+}
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 200px;
+    box-shadow: 0 5px 10px var(--clr-orange);
+    background-color: var(--clr-orange);
+    color: var(--clr-gray-1);
+}
+.btn-white {
+    color: var(--clr-orange);
+    background-color: var(--clr-gray-1);
+}
+/* Global End */
+/* Header Start */
+.header {
+    position: relative;
+    height: 100vh;
+}
+.header-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+.header-info {
+}
+.header-image {
+}
+/* Header end */
