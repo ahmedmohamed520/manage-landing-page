@@ -7,9 +7,7 @@ const Footer = () => {
                 <div className="footer-container">
                     {/* Socials */}
                     <div className="footer-socials">
-                        <div className="logo">
-                            <img src="images/logo.svg" alt="logo  " />
-                        </div>
+                        <div className="logo">manage</div>
                         <div className="social-icons">
                             <a href="/" className="social-icon">
                                 <img src="images/icon-facebook.svg" alt="facebook" />
@@ -56,7 +54,7 @@ const Footer = () => {
                     </div>
                     <div className="copyrights">
                         <form className="footer-form">
-                            <input type="email" />
+                            <input placeholder="Updates in your inbox..." type="email" />
                             <button className="btn">Go</button>
                         </form>
                         <p>Copyright 2020. All Rights Reserved</p>

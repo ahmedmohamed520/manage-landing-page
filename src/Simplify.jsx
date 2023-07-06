@@ -5,7 +5,7 @@ const Simplify = () => {
         <section className="simplify-section">
             <div className="container">
                 <div className="simplify-container">
-                    <h2 className="heading-secondary text-white">Simplify how your team works today.</h2>
+                    <p className="simplify-heading">Simplify how your team works today.</p>
                     <button className="btn btn-white">Get Started</button>
                 </div>
             </div>

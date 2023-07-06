@@ -12,6 +12,7 @@ const App = () => {
             <Features />
 
             <Testimonials />
+            <Simplify />
             <Footer />
         </div>
     );
