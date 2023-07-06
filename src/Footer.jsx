@@ -27,31 +27,34 @@ const Footer = () => {
                         </div>
                     </div>
                     {/* Links */}
-                    <div className="footer-links">
-                        <a href="/" className="footer-link">
-                            Home
-                        </a>
-                        <a href="/" className="footer-link">
-                            Pricing
-                        </a>
-                        <a href="/" className="footer-link">
-                            Products
-                        </a>
-                        <a href="/" className="footer-link">
-                            About Us
-                        </a>
+                    <div className="footer-links-container">
+                        <div className="footer-links">
+                            <a href="/" className="footer-link">
+                                Home
+                            </a>
+                            <a href="/" className="footer-link">
+                                Pricing
+                            </a>
+                            <a href="/" className="footer-link">
+                                Products
+                            </a>
+                            <a href="/" className="footer-link">
+                                About Us
+                            </a>
+                        </div>
+                        <div className="footer-links">
+                            <a href="/" className="footer-link">
+                                Careers
+                            </a>
+                            <a href="/" className="footer-link">
+                                Community
+                            </a>
+                            <a href="/" className="footer-link">
+                                Privacy Policy
+                            </a>
+                        </div>
                     </div>
-                    <div className="footer-links">
-                        <a href="/" className="footer-link">
-                            Careers
-                        </a>
-                        <a href="/" className="footer-link">
-                            Community
-                        </a>
-                        <a href="/" className="footer-link">
-                            Privacy Policy
-                        </a>
-                    </div>
+
                     <div className="copyrights">
                         <form className="footer-form">
                             <input placeholder="Updates in your inbox..." type="email" />
@@ -59,6 +62,7 @@ const Footer = () => {
                         </form>
                         <p>Copyright 2020. All Rights Reserved</p>
                     </div>
+                    <p className="mob-copyrights">Copyright 2020. All Rights Reserved</p>
                 </div>
             </div>
         </footer>

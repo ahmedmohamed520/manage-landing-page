@@ -25,17 +25,48 @@ const Slider = () => {
     }, [activeSlide]);
     console.log(activeSlide);
     useEffect(() => {
-        setTimeout(() => {
+        const timer = setTimeout(() => {
             nextSlideHandler();
         }, 3000);
+        return () => {
+            clearTimeout(timer);
+        };
     }, [nextSlideHandler]);
     return (
-        <div className="slider">
-            {/* Slide */}
-            {slides.map((slide) => (
-                <Slide key={slide.id} {...slide} slideClassesHandler={slideClassesHandler} />
-            ))}
-        </div>
+        <>
+            <div className="slider">
+                {/* Slide */}
+                {slides.map((slide) => (
+                    <Slide key={slide.id} {...slide} slideClassesHandler={slideClassesHandler} />
+                ))}
+            </div>{" "}
+            <div className="slider-circles">
+                <div
+                    onClick={() => {
+                        setActiveSlide(0);
+                    }}
+                    className={`slider-circle ${activeSlide === 0 && "active-circle"}`}
+                ></div>
+                <div
+                    onClick={() => {
+                        setActiveSlide(1);
+                    }}
+                    className={`slider-circle ${activeSlide === 1 && "active-circle"}`}
+                ></div>
+                <div
+                    onClick={() => {
+                        setActiveSlide(2);
+                    }}
+                    className={`slider-circle ${activeSlide === 2 && "active-circle"}`}
+                ></div>
+                <div
+                    onClick={() => {
+                        setActiveSlide(3);
+                    }}
+                    className={`slider-circle ${activeSlide === 3 && "active-circle"}`}
+                ></div>
+            </div>
+        </>
     );
 };
 

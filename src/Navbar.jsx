@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenuHandler = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
     return (
         <nav className="navbar">
             <div className="container">
@@ -8,7 +13,8 @@ const Navbar = () => {
                     <div className="logo">
                         <img src="images/logo.svg" alt="logo" />
                     </div>
-                    <div className="nav-menu">
+                    <div className={`nav-menu ${isMenuOpen && "show"}`}>
+                        <div className="overlay"></div>
                         <ul className="nav-list">
                             <li className="nav-item">
                                 <a href="/" className="nav-link">
@@ -38,9 +44,17 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <button className="btn">Get Started</button>
-                    <div className="nav-toggler">
-                        <img src="images/icon-hamburger.svg" alt="menu opener" className="show" />
-                        <img src="images/icon-close.svg" alt="menu opener" className="" />
+                    <div onClick={toggleMenuHandler} className="nav-toggler">
+                        <img
+                            src="images/icon-hamburger.svg"
+                            alt="menu opener"
+                            className={`${!isMenuOpen && "show"}`}
+                        />
+                        <img
+                            src="images/icon-close.svg"
+                            alt="menu opener"
+                            className={`${isMenuOpen && "show"}`}
+                        />
                     </div>
                 </div>
             </div>
