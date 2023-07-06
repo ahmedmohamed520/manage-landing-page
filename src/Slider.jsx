@@ -23,7 +23,7 @@ const Slider = () => {
             setActiveSlide(0);
         } else setActiveSlide((activeSlide) => activeSlide + 1);
     }, [activeSlide]);
-    console.log(activeSlide);
+
     useEffect(() => {
         const timer = setTimeout(() => {
             nextSlideHandler();

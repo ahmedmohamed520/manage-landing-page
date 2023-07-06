@@ -1,6 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
+
+function ValidateEmail(value) {
+    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+    if (value.match(validRegex)) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 const Footer = () => {
+    const [emailInputValue, setEmailInputValue] = useState("");
+    const [inputError, setInputError] = useState("");
+
+    const inputChangeHandler = (e) => {
+        setEmailInputValue(e.target.value);
+    };
+    const validateEmail = () => {
+        setInputError("");
+        if (emailInputValue.trim().length === 0) setInputError("Email should not be empty.");
+        if (!ValidateEmail(emailInputValue)) setInputError("Please enter a valid email.");
+    };
+    const submitHandler = (e) => {
+        e.preventDefault();
+        if (!inputError) {
+            setEmailInputValue("");
+        }
+    };
     return (
         <footer className="footer">
             <div className="container">
@@ -56,9 +83,21 @@ const Footer = () => {
                     </div>
 
                     <div className="copyrights">
-                        <form className="footer-form">
-                            <input placeholder="Updates in your inbox..." type="email" />
-                            <button className="btn">Go</button>
+                        <form onSubmit={submitHandler} className={`footer-form ${inputError && "error"}`}>
+                            <div className="form-group">
+                                <input
+                                    value={emailInputValue}
+                                    onChange={inputChangeHandler}
+                                    onBlur={validateEmail}
+                                    placeholder="Updates in your inbox..."
+                                    type="email"
+                                />
+                                {inputError && <span>{inputError}</span>}
+                            </div>
+
+                            <button onClick={validateEmail} className="btn">
+                                Go
+                            </button>
                         </form>
                         <p>Copyright 2020. All Rights Reserved</p>
                     </div>
