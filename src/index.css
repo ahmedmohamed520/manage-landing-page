@@ -1,0 +1,22 @@
+:root {
+    --clr-gray-1: hsl(0, 0%, 98%);
+    --clr-gray-2: hsl(13, 100%, 96%);
+    --clr-gray-3: hsl(227, 12%, 61%);
+    --clr-gray-4: hsl(228, 39%, 23%);
+    --clr-gray-5: hsl(233, 12%, 13%);
+    --clr-orange: hsl(12, 88%, 59%);
+}
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
