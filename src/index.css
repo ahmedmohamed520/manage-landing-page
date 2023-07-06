@@ -275,7 +275,7 @@ a {
 }
 .footer-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 2fr 1fr;
 }
 .footer-socials {
     display: flex;
@@ -297,6 +297,10 @@ a {
 .social-icon:hover {
     filter: brightness(0) saturate(100%) invert(67%) sepia(63%) saturate(6800%) hue-rotate(341deg)
         brightness(103%) contrast(90%);
+}
+.footer-links-container {
+    display: flex;
+    justify-content: space-around;
 }
 .footer-links {
     display: flex;
@@ -351,6 +355,9 @@ a {
 
 .copyrights p {
     font-size: 0.75rem;
+}
+.mob-copyrights {
+    display: none;
 }
 /* Footer End */
 
